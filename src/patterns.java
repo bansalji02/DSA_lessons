@@ -101,6 +101,21 @@ class patternMaker{
         }
     }
 
+    //0-1 triangle where 1st element of every row is going to start with alternate bit
+    void zeroOneTriangle(int columns){
+        for (int i = 0 ; i<columns ; i++){
+            for (int j =0; j<i+1;j++){
+                if ((i+j)%2 == 0){
+                    System.out.print("1");
+                }
+                else {
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
+        }
+    }
+
 
 }
 
@@ -115,7 +130,8 @@ public class patterns {
         //pm.invertedHalfPyramid2(5);
         //pm.numberHalfPyramid(5);
         //pm.invertedNumericalHalfPyramid(5);
-        pm.floydsTriangle(5);
+        //pm.floydsTriangle(5);
+        pm.zeroOneTriangle(5);
 
     }
 }
